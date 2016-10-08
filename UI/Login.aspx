@@ -10,14 +10,15 @@
     <form id="form1" runat="server">
     <div style="margin-bottom: 0px">
         <asp:Label ID="Label1" runat="server" Text="用户名"></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="密码"></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+        <image src="ValidateImage.aspx" alt="提示文字" style ="width:80px; height:20px" onclick ="this.src = this.src + '?'" />
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button_Click" Text="登陆" />
         <br />
-        <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="帐密123"></asp:Label>
+        <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="Label"></asp:Label>
     </div>
     </form>
 </body>
