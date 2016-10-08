@@ -17,7 +17,7 @@
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button_Click" Text="登陆" />
         <br />
-        <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="Label"></asp:Label>
+        <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="帐密123"></asp:Label>
     </div>
     </form>
 </body>
