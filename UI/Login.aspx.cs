@@ -21,34 +21,45 @@ public partial class _Default : System.Web.UI.Page
         dt = LoginOperation.GetDTFromDAL(strSQL);
         if (dt.Rows.Count == 1)
         {
-            Session["userid"] = dt.Rows[0]["userid"].ToString();
-            Session["userrole"] = dt.Rows[0]["userrole"].ToString();
-            string Role = dt.Rows[0]["Role"].ToString();
-            switch (Role) 
+            if (dt.Rows[0]["password"].ToString() == TextBox2.Text)
             {
-                case "1": 
-                    Response.Redirect("AdminDefault.aspx");
-                    break;
-                case "2":
-                    Response.Redirect("AdminDefault.aspx");
-                    break;
-                case "3":
-                    Response.Redirect("AdminDefault.aspx");
-                    break;
-                case "4":
-                    Response.Redirect("AdminDefault.aspx");
-                    break;
+                Session["userid"] = dt.Rows[0]["userid"].ToString();
+                Session["userrole"] = dt.Rows[0]["userrole"].ToString();
+                string Role = dt.Rows[0]["Role"].ToString();
+                switch (Role)
+                {
+                    case "1":
+                        Response.Redirect("AdminDefault.aspx");
+                        break;
+                    case "2":
+                        Response.Redirect("AdminDefault.aspx");
+                        break;
+                    case "3":
+                        Response.Redirect("AdminDefault.aspx");
+                        break;
+                    case "4":
+                        Response.Redirect("AdminDefault.aspx");
+                        break;
 
+                }
             }
-            Response.Redirect("AdminDefault.aspx");
+            else {
+                Label3.Text = "密码不正确！";
+            }
+           
+           
         }
         else
         {
-            Label3.Text = "用户名或密码不正确！";
+            Label3.Text = "用户名不正确！";
         }
     }
 
     protected void TextBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+    protected void TextBox1_TextChanged(object sender, EventArgs e)
     {
 
     }
