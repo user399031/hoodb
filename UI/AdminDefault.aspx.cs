@@ -22,8 +22,8 @@ public partial class AdminDefault : System.Web.UI.Page
                 DropDownList1.Items.Add(dt.Rows[i][0].ToString());           
             }
         }
-      
-        
+
+        string a = "这是我测试推送的";
 
     }
 }
