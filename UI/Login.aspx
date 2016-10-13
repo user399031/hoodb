@@ -19,7 +19,7 @@
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button_Click" Text="登陆" />
         <br />
-        <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="账号密码123"></asp:Label>
+        <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="账号密码123."></asp:Label>
     </div>
     </form>
 </body>
