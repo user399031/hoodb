@@ -23,7 +23,7 @@ public partial class AdminDefault : System.Web.UI.Page
             }
         }
 
-        string a = "这是我测试推送";
+        string a = "这是我测试推送2";
 
     }
 }
